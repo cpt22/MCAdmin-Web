@@ -1,3 +1,18 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  devise_for :users
+
+  root to: 'home#index'
+  # unauthenticated :user do
+  #   root to: 'home#index', as: :unauthenticated_root
+  # end
+  #
+  # authenticated :user do
+  #   root to: 'servers#index', as: :authenticated_root
+  # end
+
+  resources :users, only: [:new, :create]
+
+  resource :servers
+
+  resources :home, only: :index
 end
