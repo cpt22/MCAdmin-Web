@@ -3,7 +3,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable, :trackable
 
-  #before_action :authenticate_user!
-
+  has_many :servers, through: :server_roles
+  has_many :owned_servers, inverse_of: 'owner'
 
 end
