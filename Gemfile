@@ -30,7 +30,8 @@ gem 'draper', '~> 4.0.2'
 gem 'bootstrap', '~> 5.0.1'
 gem 'bcrypt', '~> 3.1.16'
 gem 'mysql2'
-gem 'devise'
+gem 'devise', '~> 4.8.0'
+gem 'pundit', '~> 2.1.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
