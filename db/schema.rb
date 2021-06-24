@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_20_224347) do
+ActiveRecord::Schema.define(version: 2021_06_23_225206) do
 
   create_table "player_servers", charset: "utf8mb4", force: :cascade do |t|
     t.bigint "player_id", null: false
@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(version: 2021_06_20_224347) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string "unconfirmed_email"
+    t.integer "access_level", default: 1, null: false
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

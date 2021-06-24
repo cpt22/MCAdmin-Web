@@ -5,17 +5,14 @@ Rails.application.routes.draw do
   }
 
   root to: 'home#index'
-  # unauthenticated :user do
-  #   root to: 'home#index', as: :unauthenticated_root
-  # end
-  #
-  # authenticated :user do
-  #   root to: 'servers#index', as: :authenticated_root
-  # end
 
   resources :users, only: [:new, :create]
 
-  resources :servers, only: :index
+  resources :servers, only: [:index, :show]
+
+  resources :account, only: :index
 
   resources :home, only: :index
+
+  resources :install, only: :index
 end
