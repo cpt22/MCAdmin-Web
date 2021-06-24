@@ -237,7 +237,7 @@ PLATFORMS
   x86_64-darwin-20
 
 DEPENDENCIES
-  bcrypt (~> 3.1.16)
+  bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.4)
   bootstrap (~> 5.0.1)
   byebug
@@ -261,7 +261,7 @@ DEPENDENCIES
   webpacker (~> 5.0)
 
 RUBY VERSION
-   ruby 3.0.0p0
+   ruby 2.6.6p146
 
 BUNDLED WITH
-   2.2.3
+   2.2.21

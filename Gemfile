@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.0'
+ruby '2.6.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
@@ -28,7 +28,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'draper', '~> 4.0.2'
 gem 'bootstrap', '~> 5.0.1'
-gem 'bcrypt', '~> 3.1.16'
+gem 'bcrypt', '~> 3.1.7'
 gem 'mysql2'
 gem 'devise', '~> 4.8.0'
 gem 'pundit', '~> 2.1.0'
