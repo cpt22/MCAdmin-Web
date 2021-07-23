@@ -5,12 +5,15 @@ class ServersController < ApplicationController
   before_action :authorize_server
 
   def index
+    @servers = current_user.servers
     respond_to do |format|
       format.html
     end
   end
 
   def show
+    @all_attributes = @server.player_servers.collect{|ps| [ps.player_id, {status: ps.status, banned: ps.banned, last_seen: ps.updated_at}]}.to_h
+    @players = @server.players
   end
 
 private

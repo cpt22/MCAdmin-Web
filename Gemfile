@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.4'
+ruby '3.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
@@ -32,6 +32,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'mysql2'
 gem 'devise', '~> 4.8.0'
 gem 'pundit', '~> 2.1.0'
+gem 'kaminari', '~> 1.2.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

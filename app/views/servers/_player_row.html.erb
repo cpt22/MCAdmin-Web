@@ -1,0 +1,11 @@
+<% @p_attrs = @all_attributes[player.id] %>
+<% status = @p_attrs[:status].to_sym == :online ? true : false %>
+<% banned = @p_attrs[:banned].to_sym == :true ? true : false %>
+<%=content_tag :li, class: "list-group-item list-group-item-action" do%>
+  <%=content_tag :div, class: "row" do%>
+    <%=content_tag :div, player.username, class: "col-4"%>
+    <%=content_tag :div, (status ? "Online" : "Offline"), class: "col-3"%>
+    <%=content_tag :div, (status ? "Now" : @p_attrs[:last_seen]), class: "col-3"%>
+    <%=content_tag :div, (banned ? "Yes" : "No"), class: "col-2"%>
+  <%end%>
+<%end%>

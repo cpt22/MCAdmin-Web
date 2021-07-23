@@ -1,0 +1,6 @@
+<%=content_tag :li, class: "list-group-item list-group-item-action", onclick: "window.location.href = '#{server_path(server)}'" do%>
+  <%=content_tag :div, class: "row" do%>
+    <%=content_tag :div, server.name, class: "col-10"%>
+    <%=content_tag :div, server.online_player_count, class: "col-2"%>
+  <%end%>
+<%end%>

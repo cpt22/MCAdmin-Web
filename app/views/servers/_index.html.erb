@@ -1,0 +1,9 @@
+<%=content_tag :ul, class: "list-group" do%>
+  <%=content_tag :li, class: "list-group-item" do%>
+    <%=content_tag :div, class: "row" do%>
+      <%=content_tag :div, "Server Name", class: "col-10"%>
+      <%=content_tag :div, "Online Player Count", class: "col-2"%>
+    <%end%>
+  <%end%>
+  <%=render partial: "index_row", collection: @servers, as: :server%>
+<%end%>

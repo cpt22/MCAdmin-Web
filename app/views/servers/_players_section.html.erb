@@ -1,0 +1,11 @@
+<%=content_tag :ul, class: "list-group" do%>
+  <%=content_tag :li, class: "list-group-item" do%>
+    <%=content_tag :div, class: "row" do%>
+      <%=content_tag :div, "Username", class: "col-4"%>
+      <%=content_tag :div, "Status", class: "col-3"%>
+      <%=content_tag :div, "Last Seen", class: "col-3"%>
+      <%=content_tag :div, "Banned?", class: "col-2"%>
+    <%end%>
+  <%end%>
+  <%=render partial: "player_row", collection: @players, as: :player%>
+<%end%>

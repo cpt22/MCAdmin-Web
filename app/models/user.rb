@@ -6,7 +6,7 @@ class User < ApplicationRecord
   enum access_level: {admin: 100, moderator: 50, user: 1}
 
   has_many :server_roles, dependent: :destroy
-  has_many :servers, through: :server_roles, inverse_of: :server_roles
+  has_many :servers, through: :server_roles, inverse_of: :users
 
   def admin_access?
     return access_level.to_sym == :admin
